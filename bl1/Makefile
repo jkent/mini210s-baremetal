@@ -19,7 +19,7 @@ else
 	CFLAGS := -Os
 endif
 
-CFLAGS  += -g3 -Wall -mtune=cortex-a8 -std=gnu99 -ffreestanding -nostdinc
+CFLAGS  += -g3 -Wall -mtune=cortex-a8 -std=gnu99 -ffreestanding -nostdinc -D__KERNEL__
 LDFLAGS := -nostartfiles -nodefaultlibs -nostdlib -static
 INCLUDE := -I./include -I./src
  

@@ -1,6 +1,4 @@
-#define notrace				__attribute__((no_instrument_function))
-#define __naked				__attribute__((naked)) notrace
-#define __section(S)		__attribute__ ((__section__(#S)))
+#include <linux/compiler.h>
 
 #define GPJ2CON *((volatile unsigned int *) 0xE0200280)
 #define GPJ2DAT *((volatile unsigned int *) 0xE0200284)
