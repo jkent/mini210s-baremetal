@@ -39,7 +39,7 @@ build/%.elf: src/$(PROJECT_NAME).ld $(OFILES)
 
 build/%.raw: build/%.elf
 	$(OBJCOPY) -S -I elf32-littlearm -O binary $< $@
-	$(SIZE) --target=binary $<
+	$(SIZE) $<
 
 build/%.dis: build/%.elf
 	$(OBJDUMP) -S -j .text $< > $@ || rm $@
