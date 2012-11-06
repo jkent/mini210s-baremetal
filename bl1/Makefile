@@ -50,3 +50,9 @@ build/%.bin: build/%.raw
 .PHONY: clean
 clean:
 	rm -rf build
+
+test: build/$(PROJECT_NAME).bin
+	tools/dnw.py build/$(PROJECT_NAME).bin
+
+server: build/$(PROJECT_NAME).bin
+	tools/dnw.py -l build/$(PROJECT_NAME).bin
