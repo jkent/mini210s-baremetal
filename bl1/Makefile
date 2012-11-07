@@ -51,7 +51,7 @@ build/%.bin: build/%.raw
 clean:
 	rm -rf build
 
-test: build/$(PROJECT_NAME).bin
+load: build/$(PROJECT_NAME).bin
 	tools/dnw.py build/$(PROJECT_NAME).bin
 
 server: build/$(PROJECT_NAME).bin
